@@ -8,7 +8,7 @@ update_packages() {
 echo " Recherche de mises à jour en cours ! "
 sudo apt update > /dev/null 2>&1
 
-if [ $? -eq 0]; then
+if [ $? -eq 0 ]; then
 	echo " des mises à jours sont disponibles ! " 
 	read -p " Souhaitez vous mettre à jour ? (O/N) ? " choice 
 	case "$choice" in 
