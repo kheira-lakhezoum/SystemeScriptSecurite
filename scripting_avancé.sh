@@ -1,6 +1,6 @@
 #! /bin/bash
 
-date=`date "+%Y%m%d"`
+date=`date "+%Y-%m-%d"`
 SOURCE="/home/hugo/Documents/Plateforme"
 BACKUP="/home/hugo/Documents/backup"
 HISTORIC="/home/hugo/Documents/backup/$date"
