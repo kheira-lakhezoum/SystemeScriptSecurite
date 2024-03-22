@@ -10,7 +10,7 @@ sudo apt update > /dev/null 2>&1
 
 if [ $? -eq 0 ]; then
 	echo " des mises à jours sont disponibles ! " 
-	read -p " Souhaitez vous mettre à jour ? (O/N) ? " choice 
+	read -n 1 -p " Souhaitez vous mettre à jour ? (O/N) ? " choice 
 	case "$choice" in 
 		[oO])
 			echo "Lancement des mises à jour"
@@ -26,3 +26,4 @@ if [ $? -eq 0 ]; then
 else
 	echo "Pas de mises à jour disponible"
 fi 
+
