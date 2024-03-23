@@ -13,7 +13,7 @@ response=$(curl -s -H "X-Auth-Token: $API_KEY" "$URL")
 
 if [ $? -eq 0 ]; then
     matches=$(echo "$response" | jq -r --arg start "$start_of_week" '.matches | map(select(.utcDate | startswith($start)))')
-    echo "Liste des matchs de la Ligue 1 de la semaine en cours (du $start_of_week) :"
+    echo "Liste des matchs de la Ligue 1 de la semaine du $start_of_week :"
     echo "---------------------------------------------------------------------------"
     echo "$matches" | jq -r '.[] | "\(.homeTeam.name) vs \(.awayTeam.name) - \(.utcDate)"'
 else
