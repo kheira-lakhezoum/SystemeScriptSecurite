@@ -19,6 +19,4 @@ match_list=$(echo "${response}" | jq -r '.matches[] | .homeTeam.name, .awayTeam.
 
 echo "Liste des matchs de la Ligue 1 de la semaine du ${start_of_week} au ${end_of_week}:"
 echo "------------------------------------------------------------------------------"
-for entry in $(echo "${match_list}"); do
-    echo "${entry}"
-done
+echo "$match_list"
